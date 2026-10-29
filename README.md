@@ -31,3 +31,19 @@ Incentivar a preservação das praias, dos espaços públicos e do patrimônio c
 A população e os visitantes podem encontrar dificuldades para localizar informações organizadas e acessíveis sobre atrações turísticas, eventos culturais e atividades de lazer em Paulista.
 
 O Descubra Paulista busca contribuir para a solução desse problema por meio de uma plataforma digital que reúna essas informações em um único lugar, facilitando a descoberta e o aproveitamento das opções disponíveis na cidade.
+
+Impacto Social e Ambiental
+
+O aplicativo pretende contribuir para:
+
+O fortalecimento do turismo local.
+
+A valorização dos artistas, produtores e iniciativas culturais da região.
+
+A conscientização sobre a preservação ambiental.
+
+A divulgação de atividades de lazer acessíveis à população.
+
+O incentivo à economia local e ao comércio relacionado ao turismo.
+
+A valorização dos espaços públicos e das riquezas naturais de Paulista.

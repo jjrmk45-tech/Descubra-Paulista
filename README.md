@@ -4,11 +4,11 @@ Promovendo o turismo sustentável, a valorização da cultura local e o acesso a
 
 Sobre o Projeto:
 
-O Descubra Paulista é um aplicativo desenvolvido com o objetivo de incentivar o turismo sustentável, valorizar a cultura local e facilitar o acesso da população às atividades de lazer disponíveis no município de Paulista, em Pernambuco.
+O Descubra Paulista é um site desenvolvido com o objetivo de incentivar o turismo sustentável, valorizar a cultura local e facilitar o acesso da população às atividades de lazer disponíveis no município de Paulista, em Pernambuco.
 
 A proposta é reunir informações sobre pontos turísticos, praias, espaços culturais, eventos e opções de lazer, ajudando moradores e visitantes a conhecer melhor as riquezas naturais, históricas e culturais da cidade.
 
-Além de incentivar o turismo consciente, o aplicativo busca fortalecer a identidade local, estimular a preservação ambiental e contribuir para a divulgação de iniciativas culturais e turísticas da região.
+Além de incentivar o turismo consciente, o site busca fortalecer a identidade local, estimular a preservação ambiental e contribuir para a divulgação de iniciativas culturais e turísticas da região.
 
  
  Objetivos:
@@ -34,7 +34,7 @@ O Descubra Paulista busca contribuir para a solução desse problema por meio de
 
 Impacto Social e Ambiental.
 
-O aplicativo pretende contribuir para:
+O site pretende contribuir para:
 
 O fortalecimento do turismo local.
 

@@ -32,7 +32,7 @@ A população e os visitantes podem encontrar dificuldades para localizar inform
 
 O Descubra Paulista busca contribuir para a solução desse problema por meio de uma plataforma digital que reúna essas informações em um único lugar, facilitando a descoberta e o aproveitamento das opções disponíveis na cidade.
 
-Impacto Social e Ambiental
+Impacto Social e Ambiental.
 
 O aplicativo pretende contribuir para:
 

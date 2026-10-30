@@ -47,3 +47,20 @@ A divulgação de atividades de lazer acessíveis à população.
 O incentivo à economia local e ao comércio relacionado ao turismo.
 
 A valorização dos espaços públicos e das riquezas naturais de Paulista.
+
+Alunos:
+
+Gedson Eber Ribeiro Silva 
+(01770703)
+
+Julio Ferreira da Silva Neto 
+(01808964)
+
+Iarlley Oliveira França 
+(01812784)
+
+Wendel Alexandre Pereira do Nascimento 
+(01800433)
+
+Cleydson Barbosa da Silva Ramos
+(01786045)

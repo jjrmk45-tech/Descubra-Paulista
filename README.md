@@ -1,4 +1,4 @@
-Descubra Nossa Cidade
+Descubra Paulista
 
 Portal turístico criado para reunir, em um único lugar, informações sobre atrações, eventos, lazer, gastronomia, comércio local e canais públicos de uma cidade.
 

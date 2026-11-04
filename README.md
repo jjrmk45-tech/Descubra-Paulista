@@ -1,54 +1,59 @@
-# Descubra-Paulista
-Promovendo o turismo sustentável, a valorização da cultura local e o acesso ao lazer em Paulista–PE.
+Descubra Nossa Cidade
 
+Portal turístico criado para reunir, em um único lugar, informações sobre atrações, eventos, lazer, gastronomia, comércio local e canais públicos de uma cidade.
 
-Sobre o Projeto:
+Situação da stack: a interface inicial foi criada em React com Vite. Para implementar cadastro, login, recuperação de senha, área restrita, persistência de usuários e envio de e-mails, o projeto foi migrado para React com Next.js e Payload CMS dentro do Figma Make. O histórico anterior à migração permanece registrado no Git.
 
-O Descubra Paulista é um site desenvolvido com o objetivo de incentivar o turismo sustentável, valorizar a cultura local e facilitar o acesso da população às atividades de lazer disponíveis no município de Paulista, em Pernambuco.
+Problema
 
-A proposta é reunir informações sobre pontos turísticos, praias, espaços culturais, eventos e opções de lazer, ajudando moradores e visitantes a conhecer melhor as riquezas naturais, históricas e culturais da cidade.
+Informações turísticas municipais normalmente ficam distribuídas entre redes sociais, páginas institucionais e divulgações isoladas. Isso dificulta que moradores e visitantes encontrem eventos, atrações, serviços e contatos confiáveis.
 
-Além de incentivar o turismo consciente, o site busca fortalecer a identidade local, estimular a preservação ambiental e contribuir para a divulgação de iniciativas culturais e turísticas da região.
+Objetivo
 
- 
- Objetivos:
+Oferecer um portal responsivo e acessível que:
 
-Divulgar os principais pontos turísticos de Paulista–PE.
+apresente os principais atrativos da cidade;
+concentre notícias, festas, eventos e atividades de lazer;
+facilite o planejamento de visitas;
+aproxime visitantes, comerciantes, organizadores e prefeitura;
+permita que usuários criem uma conta e mantenham um histórico de navegação.
 
-Incentivar práticas de turismo sustentável e responsável.
+Funcionalidades
 
-Valorizar a história, a cultura e as tradições locais.
+Portal público
 
-Facilitar o acesso a eventos culturais e atividades de lazer.
+Página inicial responsiva;
+navegação para atrações, agenda, planejamento e prefeitura;
+carrossel de eventos e atividades;
+categorias de cultura, natureza, gastronomia e festas;
+atalhos para hospedagem, alimentação, comércio e transporte;
+contatos da prefeitura e da Secretaria de Turismo;
+espaços destinados a vendedores e organizadores de eventos.
 
-Aproximar moradores e visitantes das atrações disponíveis no município.
+Autenticação
 
-Incentivar a preservação das praias, dos espaços públicos e do patrimônio cultural.
+Cadastro de usuário;
+login por e-mail e senha;
+recuperação de senha por e-mail;
+redefinição de senha por link temporário;
+área restrita;
+proteção de rotas;
+logoff seguro;
+bloqueio temporário após várias tentativas incorretas.
 
- 
- Problema Identificado:
+Tecnologias
 
-A população e os visitantes podem encontrar dificuldades para localizar informações organizadas e acessíveis sobre atrações turísticas, eventos culturais e atividades de lazer em Paulista.
+React 19;
+TypeScript;
+Next.js App Router;
+Payload CMS;
+Tailwind CSS 4;
+Resend para recuperação de senha por e-mail;
+pnpm;
+Figma Make;
+Git e GitHub.
 
-O Descubra Paulista busca contribuir para a solução desse problema por meio de uma plataforma digital que reúna essas informações em um único lugar, facilitando a descoberta e o aproveitamento das opções disponíveis na cidade.
-
-Impacto Social e Ambiental.
-
-O site pretende contribuir para:
-
-O fortalecimento do turismo local.
-
-A valorização dos artistas, produtores e iniciativas culturais da região.
-
-A conscientização sobre a preservação ambiental.
-
-A divulgação de atividades de lazer acessíveis à população.
-
-O incentivo à economia local e ao comércio relacionado ao turismo.
-
-A valorização dos espaços públicos e das riquezas naturais de Paulista.
-
-Alunos:
+Integrantes:
 
 Gedson Eber Ribeiro Silva 
 (01770703)

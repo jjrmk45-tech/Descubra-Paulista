@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro</title>
+  <style>
+    :root{--bg:#0b1220;--card:#121a2b;--text:#e8eefc;--muted:#a8b3d6;--primary:#4f8cff;--border: rgba(255,255,255,.12);}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+    .card{width:100%;max-width:420px;background:rgba(18,26,43,.85);border:1px solid var(--border);border-radius:16px;padding:24px;}
+    h1{margin:0 0 8px;font-size:22px}
+    p{margin:0 0 20px;color:var(--muted);font-size:14px}
+    label{display:block;margin:14px 0 8px;font-size:13px;color:var(--muted)}
+    input{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);outline:none}
+    button{width:100%;margin-top:18px;padding:12px 14px;border:none;border-radius:12px;background:linear-gradient(90deg,#4f8cff,#6a5cff);color:#fff;font-weight:700;cursor:pointer}
+    .alert{margin-top:14px;padding:10px 12px;border-radius:12px;display:none}
+    .alert.error{display:block;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.35);color:#ffd5d9}
+    .alert.ok{display:block;background:rgba(79,140,255,.12);border:1px solid rgba(79,140,255,.35);color:#d8e6ff}
+    a{color:var(--primary);text-decoration:none;font-size:13px}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Cadastre-se 📝</h1>
+    <p>Crie sua conta para acessar o conteúdo do tema.</p>
+
+    <form id="form" novalidate>
+      <label for="name">Nome</label>
+      <input id="name" name="name" type="text" required autocomplete="name" placeholder="Seu nome" />
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@email.com" />
+
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Crie uma senha" />
+
+      <label for="confirm">Confirmar senha</label>
+      <input id="confirm" name="confirm" type="password" required autocomplete="new-password" placeholder="Repita a senha" />
+
+      <button id="btn" type="submit">Criar conta</button>
+
+      <div id="alert" class="alert" role="alert"></div>
+
+      <div style="margin-top:14px;">
+        <a href="/login.html">Já tenho conta</a>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('form');
+    const btn = document.getElementById('btn');
+    const alertBox = document.getElementById('alert');
+
+    const show = (type, msg) => {
+      alertBox.className = 'alert ' + type;
+      alertBox.textContent = msg;
+      alertBox.style.display = 'block';
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.style.display = 'none';
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+      const confirm = form.confirm.value;
+
+      if(password !== confirm) return show('error', 'As senhas não conferem.');
+
+      btn.disabled = true;
+      btn.textContent = 'Criando...';
+
+      try{
+        // ✅ ajuste para sua rota real
+        const res = await fetch('/api/auth/register', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ name, email, password })
+        });
+
+        if(!res.ok){
+          let msg = 'Não foi possível criar a conta.';
+          try{
+            const data = await res.json();
+            if(data?.message) msg = data.message;
+          }catch{}
+          show('error', msg);
+          return;
+        }
+
+        show('ok', 'Conta criada com sucesso! Redirecionando para o login...');
+        setTimeout(() => window.location.href = '/login.html', 900);
+
+      }catch{
+        show('error', 'Erro de conexão. Tente novamente.');
+      }finally{
+        btn.disabled = false;
+        btn.textContent = 'Criar conta';
+      }
+    });
+  </script>
+</body>
+</html>

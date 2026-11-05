@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saindo...</title>
+  <style>
+    body{margin:0;font-family:system-ui;background:#0b1220;color:#e8eefc;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .box{max-width:520px;text-align:center}
+    a{color:#4f8cff}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Saindo da área restrita… 👋</h2>
+    <p>Se não redirecionar automaticamente, <a href="/login.html">clique aqui</a>.</p>
+  </div>
+
+  <script>
+    (async () => {
+      try {
+        // ✅ ajuste para sua rota real
+        await fetch('/api/auth/logout', { method: 'POST' });
+      } catch(e) {
+        // mesmo com erro, redireciona
+      } finally {
+        window.location.href = '/login.html';
+      }
+    })();
+  </script>
+</body>
+</html>

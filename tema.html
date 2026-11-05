@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tema - Área Restrita</title>
+  <style>
+    :root{--bg:#0b1220;--text:#e8eefc;--muted:#a8b3d6;--primary:#4f8cff;--border: rgba(255,255,255,.12);}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);min-height:100vh;padding:24px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .pill{border:1px solid var(--border);padding:10px 12px;border-radius:999px;color:var(--muted)}
+    .content{margin-top:24px;border:1px solid var(--border);border-radius:16px;padding:20px;background:rgba(255,255,255,.03)}
+    h1{margin:0 0 10px}
+    p{color:var(--muted);line-height:1.6}
+    a.btn{
+      display:inline-block;background:rgba(79,140,255,.15);border:1px solid rgba(79,140,255,.35);
+      color:#d8e6ff;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700
+    }
+    a.btn:hover{filter:brightness(1.1)}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>📘 Conteúdo do tema</h1>
+      <div id="userBox" class="pill">Verificando autenticação...</div>
+    </div>
+    <a class="btn" href="/logout.html">Sair (Logoff)</a>
+  </header>
+
+  <section class="content">
+    <h2>✅ Seu conteúdo aqui</h2>
+    <p>
+      Esta página é acessível somente após autenticação.
+      <br/>Cole o texto, imagens e/ou módulos do seu tema aqui.
+    </p>
+  </section>
+
+  <script>
+    (async () => {
+      try{
+        // ✅ ajuste para sua rota real
+        // Rota esperada: GET /api/auth/me -> { authenticated: true, name: '...' }
+        const res = await fetch('/api/auth/me', { method:'GET' });
+
+        if(!res.ok){
+          window.location.href = '/login.html';
+          return;
+        }
+
+        const data = await res.json();
+        if(!data?.authenticated){
+          window.location.href = '/login.html';
+          return;
+        }
+
+        document.getElementById('userBox').textContent =
+          `Logado como: ${data.name || data.email || 'usuário'}`;
+
+      } catch {
+        window.location.href = '/login.html';
+      }
+    })();
+  </script>
+</body>
+</html>
